@@ -516,9 +516,16 @@ header .navbar {
 /* RESPONSIVO CELULAR */
 @media(max-width: 425px) {
     /* MODAL */
+    .modal-title {
+        font-size: 30px;
+    }
     .modal-footer {
         display: flex;
         justify-content: center;
+    }
+
+    .menu .navbar-nav {
+        font-size: 12pt;
     }
     
     /* HOME */
@@ -557,6 +564,10 @@ header .navbar {
         left: 35%;
     }
 
+    #about-area img {
+        height: auto;
+    }
+
     #about-area .container .about-title {
         margin-top: 20px;
         text-align: center;
@@ -568,7 +579,7 @@ header .navbar {
     }
 
     #about-area .container #about-list {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: bold;
     }
     
@@ -607,6 +618,14 @@ header .navbar {
         margin-bottom: 30px;
     }
 
+    .card-title {
+        font-size: 16pt;
+    }
+
+    #team-area .col-md-3 {
+        display: flex;
+    }
+
     /* TRABALHE CONOSCO */
     #apply-area #hands-img {
         display: none;
@@ -631,6 +650,10 @@ header .navbar {
         font-size: 13pt;
         height: 50px;
         margin-top: 15px;
+    }
+
+    #portfolio-area #filter-btn-box {
+        display: grid;
     }
 
     .project-box {
@@ -677,5 +700,147 @@ header .navbar {
     #contact-area .container .frase p {
         font-weight: 200;
         font-size: 12pt;
+    }
+
+    #contact-area .contact .container-fluid img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media(max-width: 375px) { 
+    #mainSlider .carousel-inner .carousel-caption h2 {
+        margin-bottom: 15px;
+    }
+
+    .main-title {
+        font-size: 26px;
+    }
+
+    #about-area .img-about {
+        margin-top: -35px;
+        height: 100%;
+    }
+
+    #about-area #about-list {
+        font-size: 12px !important; 
+    }
+
+    #services-area .container .service-box img {
+        margin-top: -30px;
+    }
+
+    .card-title {
+        font-size: 12pt;
+    }
+
+    .card-body {
+        padding: 20px 5px;
+    }
+
+    .card-text {
+        font-size: 12pt;
+    }
+
+    #team-area .col-md-3 {
+        display: flex;
+    }
+
+    #apply-area .apply-box {
+        margin-top: -80px;
+    }
+
+    #apply-area {
+        height: auto;
+    }
+
+    #filter-btn-box .main-btn {
+        font-size: 10pt;
+        height: auto;
+    }
+
+    #portfolio-area img {
+        height: 150px;
+    }
+    
+    #news-area .inputs {
+        font-size: 10pt;
+        margin-right: 130px;
+    }
+
+    .inputs input[type="email"]::placeholder {
+        font-size: 12pt;
+    }
+
+    #news-area .container img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #call-area #call-btn {
+        height: 45px;
+        width: auto;
+    }
+
+    #contact-area .contact-box i {
+        font-size: 25px;
+    }
+
+    .contact-box p {
+        font-size: 14px;
+    }
+
+    #msg-box p {
+        font-size: 17px;
+    }
+
+    #copy-area .container p {
+        font-size: 12pt;
+    }
+
+    .modal .modal-header #logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .modal .modal-header .modal-title {
+        font-size: 19px !important;
+    }
+
+    .modal .modal-body h4 {
+        font-size: 19px;
+    }
+
+    .modal-body .col-form-label {
+        font-size: 70%;
+    }
+
+    .modal .modal-body form input {
+        font-size: 12px;
+    }
+
+    .modal .modal-body textarea {
+        font-size: 12px;
+    }
+
+    .modal .modal-footer button,
+    .modal .modal-footer a {
+        font-size: 15px;
+    }
+    
+
+}
+
+@media (max-width: 320px) {
+    .progressbar-text {
+        font-size: 25px;
+    }
+
+    #portfolio-area img {
+        height: 130px;
+    }
+
+    .col-form-label {
+        font-size: 70%;
     }
 }

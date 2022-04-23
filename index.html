@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>WDPack Embalagens</title>
+     <!-- Fonte -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/syle.css">
+     <!-- Scripts -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <!-- Bootstrap Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+     <!-- Progress Bar -->
+     <script src="js/progressbar.min.js"></script>
+     <!-- Parallax -->
+     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img id="logo" src="img/logo.png" alt="Logo WDPack">
+              <h3 class="modal-title" id="exampleModalLabel">ORÇAMENTO</h3>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="text-center mb-3 mt-2">Solicite um orçamento</h4>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <form action="https://api.staticforms.xyz/submit" method="POST">
+                            <input type="hidden" name="accessKey" value="ddc6e19a-2c52-4b6c-a23b-cb3561cb6aa8">
+                            <input type="hidden" name="subject" value="Orçamento">
+                                <div class="form-group">
+                                    <label for="name" class="col-form-label">Nome:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="col-form-label">Telefone:</label>
+                                    <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXXX" id="phone" name="phone" required>
+                                </div>
+                    
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="message" class="col-form-label">Mensagem:</label>
+                                <textarea class="form-control" rows="8" id="message" placeholder="Conte-nos o que deseja orçar" name="message" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5501/index.html">
+                <button type="submit" class="btn bg-primary text-white request">Solicitar</button>
+                <a href="https://contate.me/WPack-Embalagem" target="_blank" class="btn bg-success text-white whats"><i class="bi bi-whatsapp"></i> Atendimento via Whatsapp</a>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+                <a href="index.html" class="navbar-brand">
+                    <img id="logo" src="img/logo.png" alt="Logo WDPack">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link" id="home-menu">Home</a>
+                        <a href="#" class="nav-item nav-link" id="about-menu">A Empresa</a>
+                        <a href="#" class="nav-item nav-link" id="services-menu">Serviços</a>
+                        <a href="#" class="nav-item nav-link" id="products-menu">Produtos</a>
+                        <a href="#" class="nav-item nav-link" id="orcamento-menu" data-toggle="modal" data-target="#exampleModal">Orçamento</a>
+                        <a href="#" class="nav-item nav-link" id="contact-menu">Contato</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <div class="container-fluid">
+            <div id="mainSlider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                    <li data-target="#mainSlider" data-slide-to="1"></li>
+                    <li data-target="#mainSlider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="3000">
+                        <img src="img/banner1.png" class="d-block w-100" alt="Projetos de e-commerce">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Filme Stretch</h2>
+                            <p>Confira nosso Filme Stretch que é chefe de mercado</p>
+                            <a href="produto5.html" class="main-btn">Ver produto</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="3000">
+                        <img src="img/banner2.png" class="d-block w-100" alt="Engenharia de Software">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Tem alguma dúvida?</h2>
+                            <p>Mande nos um email ou ligue para nós</p>
+                            <a href="#contact-area" class="main-btn">Entre em contato</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="3000">
+                        <img src="img/banner3.jpg" class="d-block w-100" alt="Manutenção em Software">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Serviços de Qualidade</h2>
+                            <p>Garantimos o certificado de qualidade de nossos serviços</p>
+                            <a href="#services-area" class="main-btn">Nossos serviços</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#mainSlider" class="carousel-control-prev" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a href="#mainSlider" class="carousel-control-next" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sobre a empresa -->
+        <div id="about-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">Sobre a WDPack</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="img/about.png" alt="Empresa">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="about-title">Uma empresa que pensa no futuro</h3>
+                        <p>Nossos produtos são adaptados ao que o cliente precisa em seu propósito.</p>
+                        <p>Após a especificação do produto, os responsáveis imediatamente estarão fazendo o seu produto.</p>
+                        <p>Trazemos a certificação de qualidade pensando em seu negócio.</p>
+                        <p>Veja outros diferenciais:</p>
+                        <ul id="about-list">
+                            <li><i class="bi bi-check"></i> <em>Entregamos até 3 dias úteis</em></li>
+                            <li><i class="bi bi-check"></i> <em>Fabricamos o próprio produto</em></li>
+                            <li><i class="bi bi-check"></i> <em>Filme pré estirado que rende sua economia em 45%</em></li>
+                            <li><i class="bi bi-check"></i> <em>Cumprimos com a legislação de meio ambiente</em></li>
+                            <li><i class="bi bi-check"></i> <em>Contamos com diversas parcerias</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serviços da empresa -->
+        <div id="services-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">Serviços</h3>
+                    </div>
+                    <div class="col-md-4 service-box">
+                        <figure>
+                            <img src="img/fitas.png" alt="">
+                        </figure>
+                        <h4>Fitas</h4>
+                        <p>Temos uma variedade de fitas para o seu consumo.</p>
+                    </div>
+                    <div class="col-md-4 service-box">
+                        <figure>
+                            <img src="img/filmeStretch.png" alt="">
+                        </figure>
+                        <h4>Filmes Stretch</h4>
+                        <p>Trabalhamos com o melhor filme stretch do mercado e outros.</p>
+                    </div>
+                    <div class="col-md-4 service-box">
+                        <figure>
+                            <img src="img/lona.png" alt="">
+                        </figure>
+                        <h4>Lonas</h4>
+                        <p>Temos lonas que tem um baixo custo e auxlia como proteção para você.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dados da empresa -->
+        <div id="data-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 circle-box">
+                        <div id="circleA"></div>
+                        <p>Projetos entregues</p>
+                    </div>
+                    <div class="col-md-3 circle-box">
+                        <div id="circleB"></div>
+                        <p>Clientes Felizes</p>
+                    </div>
+                    <div class="col-md-3 circle-box">
+                        <div id="circleC"></div>
+                        <p>Colaboradores</p>
+                    </div>
+                    <div class="col-md-3 circle-box">
+                        <div id="circleD"></div>
+                        <p>Cafézinhos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Time -->
+        <div id="team-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">Nosso time</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="img/profile1.png" class="card-img-top img" alt="Imagem de Perfil 1">
+                            <div class="card-body">
+                                <h5 class="card-title">David Gonçalves</h5>
+                                <p class="card-text">CEO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="img/profile2.png" class="card-img-top" alt="Imagem de Perfil 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Luciara Santana</h5>
+                                <p class="card-text">Financeiro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="img/profile3.png" class="card-img-top" alt="Imagem de Perfil 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Alex Silva</h5>
+                                <p class="card-text">Gerente de Vendas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="img/profile4.png" class="card-img-top" alt="Imagem de Perfil 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Jackqueline Sobral</h5>
+                                <p class="card-text">Financeiro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trabalhe conosco -->
+        <div id="apply-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 apply-box" id="hands-img"></div>
+                    <div class="col-md-6 apply-box" id="pattern-img">
+                        <h4>JUNTOS SOMOS MAIS FORTES!</h4>
+                        <p>Temos várias posições abertas, entre elas: Software Enginner, UI/UX Designer, Project Manager e mais.</p>
+                        <p>Clique no botão abaixo e confira os benefícios e as posições em aberto.</p>
+                        <p>Aqui você terá a chance de trabalhar com as melhores tecnologias e os profissionais mais capacitados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Porfólio -->
+        <div id="portfolio-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="main-title">Conheça nossos Produtos</h3>
+                    </div>
+                    <div class="col-md-12" id="filter-btn-box">
+                        <button class="main-btn filter-btn active" id="all-btn">Todos</button>
+                        <button class="main-btn filter-btn" id="fitas-btn">Fitas</button>
+                        <button class="main-btn filter-btn" id="filmes-btn">Filmes Stretch</button>
+                        <button class="main-btn filter-btn" id="lonas-btn">Lonas</button>
+                    </div>
+                    <div class="col-md-4 project-box fitas">
+                        <a href="produto1.html"><img src="img/pj1.png" class="img-fluid" alt="Projeto 1"></a>
+                    </div>
+                    <div class="col-md-4 project-box filmes">
+                        <a href="produto2.html"><img src="img/pj2.png" class="img-fluid" alt="Projeto 2"></a>
+                    </div>
+                    <div class="col-md-4 project-box filmes">
+                        <a href="produto3.html"><img src="img/pj3.png" class="img-fluid" alt="Projeto 3"></a>
+                    </div>
+                    <div class="col-md-4 project-box fitas">
+                        <a href="produto4.html"><img src="img/pj4.png" class="img-fluid" alt="Projeto 4"></a>
+                    </div>
+                    <div class="col-md-4 project-box filmes">
+                        <a href="produto5.html"><img src="img/pj5.png" class="img-fluid" alt="Projeto 5"></a>
+                    </div>
+                    <div class="col-md-4 project-box lonas">
+                        <a href="produto6.html"><img src="img/pj6.png" class="img-fluid" alt="Projeto 6"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter-->
+        <div id="news-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="main-title">Fique por dentro das novidades</h3>
+                    </div>
+                </div>
+                <p>Assine nossa lista de e-mails para ficar por dentro de todas as mudanças de preços.</p>
+                <form action="https://api.staticforms.xyz/submit" method="POST">
+                <input type="hidden" name="accessKey" value="ddc6e19a-2c52-4b6c-a23b-cb3561cb6aa8">
+                <input type="hidden" name="subject" value="Newsletter">
+                    <div class="inputs">
+                        <input type="email" class="form-control" id="email-input" name="email" placeholder="Seu melhor e-mail" required>
+                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5501/index.html">
+                        <input type="submit" id="news-btn" value="Inscrever">
+                    </div>
+                </form>
+                <figure>
+                    <img src="img/SendEmail.png" alt="">
+                </figure>
+            </div>
+        </div>
+
+        <!-- Call to action -->
+        <div id="call-area">
+            <div class="container">
+                <div class="row">
+                    <p>Deseja fazer um orçamento sem compromisso?</p> <br>
+                    <button class="main-btn" id="call-btn" data-toggle="modal" data-target="#exampleModal">Orçar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div id="contact-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="main-title">Entre em contato conosco</h3>
+                    </div>
+                    <div class="col-md-4 contact-box">
+                        <i class="bi bi-telephone-fill"></i>
+                        <p><span class="contact-title">Ligue para:</span> (11) 2761-2510</p>
+                        <p><span class="contact-title">Whatsapp:</span> (11) 99878-5164</p>
+                        <p><span class="contact-title">Horários:</span> 8:00 - 19:00</p>
+                    </div>
+                    <div class="col-md-4 contact-box">
+                        <i class="bi bi-envelope-fill"></i>
+                        <p><span class="contact-title">Envie um e-mail:</span> alex.silva@wdpack.com.br</p>
+                    </div>
+                    <div class="col-md-4 contact-box">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <p><span class="contact-title">Venha tomar um café:</span> Rua Pedro Aparecido de Lima,12, Polo Industrial, Franco da Rocha/SP</p>
+                    </div>
+                    <div class="col-md-6" id="msg-box">
+                        <p>Ou nos deixe uma mensagem:</p>
+                        <figure class="image">
+                            <img src="img/contact.png" alt="">
+                        </figure>
+                    </div>
+                    <!-- ddc6e19a-2c52-4b6c-a23b-cb3561cb6aa8 -->
+                    <div class="col-md-6" id="contact-form">
+                        <form action="https://api.staticforms.xyz/submit" method="POST">
+                            <input type="hidden" name="accessKey" value="ddc6e19a-2c52-4b6c-a23b-cb3561cb6aa8">
+                            <input type="email" class="form-control" placeholder="E-mail" name="email" required>
+                            <input type="text" class="form-control" placeholder="Assunto" name="subject" required>
+                            <textarea class="form-control" rows="7" placeholder="Sua mensagem..." name="message" required></textarea>
+                            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5501/index.html">
+                            <input type="submit" class="main-btn" value="Enviar">
+                        </form>
+                    </div>
+                    <div class="frase">
+                        <p><em>“Um cliente satisfeito é o melhor marketing que uma empresa pode ter” <br> Samuel Magalhães</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-12 other-links">
+                            <figure>
+                                <img src="img/logo.png" alt="">
+                                <figcaption><strong>WDPack Embalagens</strong></figcaption>
+                            </figure>
+                            <p class="text-frase">A embalagem que precisa, você encontra Aqui!</p>
+                            <p><i class="bi bi-geo-alt-fill"></i> <a href="#">Rua Pedro Aparecido de Lima,12, Polo Industrial, Franco da Rocha/SP</a></p>
+                            <span><i class="bi bi-envelope-fill"></i> <a href="#">alex.silva@wdpack.com.br</a></span>
+                            <div class="social-icons mt-2">
+                                <a href="https://www.facebook.com/wdpackembalagens/" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div id="copy-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Desenvolvido por <a href="https://www.facebook.com/vinicius.rubia.9/" target="_blank">Vinicius Rubia</a> &copy; 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts do projeto -->
+    <script src="js/script.js"></script>
+</body>
+</html>

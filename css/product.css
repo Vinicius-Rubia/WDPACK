@@ -1,0 +1,59 @@
+#main {
+    margin: 100px 50px;
+}
+
+figure img {
+    width: 400px;
+    height: 300px;
+}
+
+#main a {
+    display: flex;
+    justify-content: center;
+}
+
+#main a button {
+    background-color: #0A7F00;
+    color: #fff;
+    border: none;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border: 1px solid transparent;
+    outline-style: none;
+}
+
+#main a button:hover,
+#main a button i:hover {
+    background-color: #FFF;
+    color: #0A7F00;
+    border: 1px solid #0A7F00;
+}
+
+#main a button i {
+    padding-right: 15px;
+    font-size: 30px;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+@media(max-width: 425px) {
+    #main h1 {
+        font-size: 20pt;
+        padding: 50px;
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    #main a {
+        margin-bottom: 20px;
+    }
+
+}

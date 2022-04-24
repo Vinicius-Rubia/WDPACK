@@ -72,7 +72,7 @@ header .navbar {
 }
 
 #mainSlider .carousel-item img {
-    height: 50em;
+    height: 100%;
 }
 
 #mainSlider .carousel-caption {

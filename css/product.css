@@ -37,6 +37,10 @@ figure img {
     font-size: 30px;
 }
 
+#main .others-products {
+    margin-left: 25px;
+}
+
 footer {
     margin-top: 100px;
 }
@@ -56,4 +60,18 @@ footer {
         margin-bottom: 20px;
     }
 
+    #main .others-products {
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width: 320px) {
+    #main a {
+        font-size: 15px;
+    }
+
+    #main p {
+        text-align: center;
+    }
 }

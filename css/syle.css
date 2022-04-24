@@ -8,6 +8,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+button:focus {
+    outline-style: none;
+}
+
+a:focus {
+    outline-style: none;
+}
+
 .row {
     margin: 0;
 }
@@ -73,6 +81,7 @@ header .navbar {
 
 #mainSlider .carousel-item img {
     height: 100%;
+    padding-top: 95px;
 }
 
 #mainSlider .carousel-caption {
@@ -199,6 +208,10 @@ header .navbar {
 /* Time */
 #team-area {
     margin-top: 20px;
+}
+
+#team-area .card img {
+    height: 400px;
 }
 
 .card-title {
@@ -534,6 +547,11 @@ header .navbar {
         width: 100%;
     }
 
+    #mainSlider .carousel-item img {
+        height: 70%;
+        padding-top: 95px;
+    }
+
     #mainSlider .carousel-caption {
         top: 40px;
     }
@@ -616,6 +634,10 @@ header .navbar {
     #team-area .col-md-3 {
         width: 50%;
         margin-bottom: 30px;
+    }
+
+    #team-area .card img {
+        height: 250px;
     }
 
     .card-title {
@@ -744,6 +766,14 @@ header .navbar {
 
     #team-area .col-md-3 {
         display: flex;
+    }
+
+    #team-area .card img {
+        height: 200px;
+    }
+
+    #team-area .card {
+        width: 100%;
     }
 
     #apply-area .apply-box {
